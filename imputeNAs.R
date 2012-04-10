@@ -18,6 +18,19 @@ imputeNAs <- function(dat){
     return(dat);
   }
   
+  #starts with an NA (or multiple), handle these
+  if (is.na(dat[1])){
+    firstNonNA <- which(!is.na(dat))[1]
+    dat[1:(firstNonNA-1)] <- dat[firstNonNA]
+  }
+  
+  #ends with an NA (or multiple), handle these
+  if (is.na(dat[length(dat)])){
+    lastNonNA <- which(!is.na(dat))
+    lastNonNA <- lastNonNA[length(lastNonNA)]
+    dat[(lastNonNA+1):length(dat)] <- dat[lastNonNA]
+  }
+  
   #get the index of all NA values
   nas <- which(is.na(dat))
 
@@ -29,8 +42,7 @@ imputeNAs <- function(dat){
 
   #the furthest away an NA value could be is half of the length of the maximum NA run
   #if there's a run at the beginning or end, then the nearest non-NA value could possibly be `length` away, so we need to keep the window large for that case.
-  #TODO: if we check the first and last elements separately, then we can use windowSize <- length/2
-  windowSize <- length
+  windowSize <- ceiling(length/2)
 
   #loop through all NAs
   for (thisIndex in nas){
@@ -82,8 +94,8 @@ runit.testSingle <- function(){
 }
 
 runit.testDouble <- function(){
-  x <- c(1:3, NA, NA, 3:1)
-  checkIdentical(imputeNAs(x), as.integer(c(1:3,1,3,1:3)))
+  x <- c(1:3, NA, NA, 1:3)
+  checkIdentical(imputeNAs(x), as.integer(c(1:3,3,1,1:3)))
 }
 
 runit.testMixed <- function(){
