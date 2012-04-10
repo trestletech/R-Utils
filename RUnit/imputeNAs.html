@@ -1,0 +1,118 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/transitional.dtd">
+<html><head><title>RUNIT TEST PROTOCOL--Mon Apr 09 19:47:19 2012</title>
+</head>
+<body><h1 TRUE>RUNIT TEST PROTOCOL--Mon Apr 09 19:47:19 2012</h1>
+<p>Number of test functions: 10</p>
+<p style=color:red>Number of errors: 2</p>
+<p style=color:red>Number of failures: 2</p>
+<hr>
+<h3 TRUE>1 Test suite</h3>
+<table border="1" width="60%" >
+<tr><th width="30%">Name</th>
+<th width="30%">Test functions</th>
+<th width="20%">Errors</th>
+<th width="20%">Failures</th>
+</tr>
+<tr><td><a href="#TrestleRUtils">TrestleRUtils</a></td>
+<td>10</td>
+<td bgcolor="red">2</td>
+<td bgcolor="red">2</td>
+</tr>
+</table>
+<hr>
+<h3 TRUE>Errors</h3>
+<table border="1" width="100%" >
+<tr><th width="30%">Test suite : test function</th>
+<th width="70%">message</th>
+</tr>
+<tr><td><a href="#TrestleRUtils_._imputeNAs.R_runit.testFirstNARun">TrestleRUtils : runit.testFirstNARun</a></td>
+<td>Error in dat[(thisIndex - windowSize):(thisIndex + windowSize)] : 
+  only 0's may be mixed with negative subscripts
+</td>
+</tr>
+<tr><td><a href="#TrestleRUtils_._imputeNAs.R_runit.testLastNARun">TrestleRUtils : runit.testLastNARun</a></td>
+<td>Error in dat[(thisIndex - windowSize):(thisIndex + windowSize)] : 
+  only 0's may be mixed with negative subscripts
+</td>
+</tr>
+</table>
+<hr>
+<h3 TRUE>Failures</h3>
+<table border="1" width="100%" >
+<tr><th width="30%">Test suite : test function</th>
+<th width="70%">message</th>
+</tr>
+<tr><td><a href="#TrestleRUtils_._imputeNAs.R_runit.testDouble">TrestleRUtils : runit.testDouble</a></td>
+<td>Error in checkIdentical(imputeNAs(x), as.integer(c(1:3, 1, 3, 1:3))) : 
+  FALSE 
+</td>
+</tr>
+<tr><td><a href="#TrestleRUtils_._imputeNAs.R_runit.testFirstNA">TrestleRUtils : runit.testFirstNA</a></td>
+<td>Error in checkIdentical(imputeNAs(x), as.integer(c(1, 1:3))) : FALSE 
+</td>
+</tr>
+</table>
+<hr>
+<h3 TRUE>Details</h3>
+<p><a name="TrestleRUtils"><h5 TRUE>Test Suite: TrestleRUtils</h5>
+</a>Test function regexp: ^runit\..+<br/>Test file regexp: .+\.R$<br/>Involved directory:<br/>.<br/><ul><li><a href="./imputeNAs.R">Test file: imputeNAs.R</a><ul><li><a name="TrestleRUtils_._imputeNAs.R_runit.testAllNA">runit.testAllNA: (1 checks) ... OK (0 seconds)<br/></a></li><li><a name="TrestleRUtils_._imputeNAs.R_runit.testDouble"><u style=color:red>runit.testDouble: FAILURE !! (check number 1)  </u></a>Error in checkIdentical(imputeNAs(x), as.integer(c(1:3, 1, 3, 1:3))) : 
+  FALSE 
+<br/></li><li><a name="TrestleRUtils_._imputeNAs.R_runit.testEmpty">runit.testEmpty: (1 checks) ... OK (0 seconds)<br/></a></li><li><a name="TrestleRUtils_._imputeNAs.R_runit.testFirstNA"><u style=color:red>runit.testFirstNA: FAILURE !! (check number 1)  </u></a>Error in checkIdentical(imputeNAs(x), as.integer(c(1, 1:3))) : FALSE 
+<br/></li><li><a name="TrestleRUtils_._imputeNAs.R_runit.testFirstNARun"><u style=color:red>runit.testFirstNARun: ERROR !!  </u></a>Error in dat[(thisIndex - windowSize):(thisIndex + windowSize)] : 
+  only 0's may be mixed with negative subscripts
+<br/></li><li><a name="TrestleRUtils_._imputeNAs.R_runit.testLastNA">runit.testLastNA: (1 checks) ... OK (0 seconds)<br/></a></li><li><a name="TrestleRUtils_._imputeNAs.R_runit.testLastNARun"><u style=color:red>runit.testLastNARun: ERROR !!  </u></a>Error in dat[(thisIndex - windowSize):(thisIndex + windowSize)] : 
+  only 0's may be mixed with negative subscripts
+<br/></li><li><a name="TrestleRUtils_._imputeNAs.R_runit.testMixed">runit.testMixed: (1 checks) ... OK (0 seconds)<br/></a></li><li><a name="TrestleRUtils_._imputeNAs.R_runit.testNoNA">runit.testNoNA: (1 checks) ... OK (0 seconds)<br/></a></li><li><a name="TrestleRUtils_._imputeNAs.R_runit.testSingle">runit.testSingle: (1 checks) ... OK (0 seconds)<br/></a></li></ul></li></ul><hr>
+<table border="0" width="80%" >
+<tr><th>Name</th>
+<th>Value</th>
+</tr>
+<tr><td>platform</td>
+<td>x86_64-pc-mingw32</td>
+</tr>
+<tr><td>arch</td>
+<td>x86_64</td>
+</tr>
+<tr><td>os</td>
+<td>mingw32</td>
+</tr>
+<tr><td>system</td>
+<td>x86_64, mingw32</td>
+</tr>
+<tr><td>status</td>
+<td></td>
+</tr>
+<tr><td>major</td>
+<td>2</td>
+</tr>
+<tr><td>minor</td>
+<td>12.2</td>
+</tr>
+<tr><td>year</td>
+<td>2011</td>
+</tr>
+<tr><td>month</td>
+<td>02</td>
+</tr>
+<tr><td>day</td>
+<td>25</td>
+</tr>
+<tr><td>svn rev</td>
+<td>54585</td>
+</tr>
+<tr><td>language</td>
+<td>R</td>
+</tr>
+<tr><td>version.string</td>
+<td>R version 2.12.2 (2011-02-25)</td>
+</tr>
+<tr><td>host</td>
+<td>JDA-DESKTOP</td>
+</tr>
+<tr><td>compiler</td>
+<td>NA</td>
+</tr>
+</table>
+</body>
+</html>
