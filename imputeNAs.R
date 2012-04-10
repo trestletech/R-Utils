@@ -4,7 +4,7 @@
 #' @param dat the vector with (potentially) NAs to be replaced
 #' @return the vector with the NAs having been replaced by the nearest non-NA value
 #' @author Jeffrey D. Allen \email{jeff.allen@@trestletechnology.net}
-imputNAs <- function(dat){
+imputeNAs <- function(dat){
   #get the index of all NA values
   nas <- which(is.na(dat))
 
@@ -40,3 +40,4 @@ imputNAs <- function(dat){
   }
   dat
 }
+
