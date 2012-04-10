@@ -1,5 +1,6 @@
 #' Fill in NAs with nearest non-NAs
 #' Fills in NAs in a vector with the nearest non-NA value. Similar to zoo::na.locf(), but uses the nearest, rather than the previous value.
+#' Answer to the question proposed by geoffjentry at http://stackoverflow.com/questions/10077415/replacing-nas-in-r-with-nearest-value/10081444#10081444
 #' @param dat the vector with (potentially) NAs to be replaced
 #' @return the vector with the NAs having been replaced by the nearest non-NA value
 #' @author Jeffrey D. Allen \email{jeff.allen@@trestletechnology.net}
